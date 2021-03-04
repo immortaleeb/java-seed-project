@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+group = 'com.github.immortaleeb'
+mainClassName = 'com.github.immortaleeb.example.Example'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "org.hamcrest:hamcrest:${hamcrestVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
